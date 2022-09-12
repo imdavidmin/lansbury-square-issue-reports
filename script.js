@@ -13,9 +13,12 @@ async function submitReport() {
     headers: { 'content-type': 'application/json' },
     body: JSON.stringify(payload),
   });
+  const button = document.querySelector('button');
+  button.disabled = true;
+
   if (r.status == 200) {
-    const button = document.querySelector('button');
-    button.disabled = true;
     button.innerText = 'Submission Successful';
+  } else {
+    button.innerText = 'A Problem Occured';
   }
 }
