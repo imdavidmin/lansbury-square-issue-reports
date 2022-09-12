@@ -8,7 +8,7 @@ async function submitReport() {
     unit: getVal('unit'),
     comment: getVal('comment'),
   };
-  const r = await fetch('https://api.lansburysquare.com/report', {
+  const r = await fetch('https://api.lansburysquare.com/report/', {
     method: 'POST',
     headers: { 'content-type': 'application/json' },
     body: JSON.stringify(payload),
