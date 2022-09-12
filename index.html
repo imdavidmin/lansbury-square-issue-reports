@@ -1,32 +1,35 @@
+<html>
+<head>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+
 <body>
   <h2>Log an issue</h2>
   <div class="container">
     <div class="formContainer">
     <label required>Issue</label>
-    <input list="issues" />
+    <input id="issue" list="issues" />
     <label required>Location</label>
-    <input list="buildings" />
+    <input id="locations"  list="locations" />
     <label>Unit number</label>
-    <input type="text" />
+    <input id="unit" type="text" />
     <label>Additional comments</label>
-    <textarea></textarea>
-    
+    <textarea id="comment"></textarea>
   </div>
     <div class="submit">
       <div class="disclaimer">
       The site staff team by default will not reply to your logged issue.<br><br>If you would like to be contacted, please leave your details in additional comments.
     </div>
       <div>
-        <button>Submit</button>
+        <button onclick="submitReport">Submit</button>
       </div>
     
     </div>
     </div>
     
-  
-  
-  <datalist id="buildings">
+ 
+  <datalist id="locations">
     <option value="Podium Garden">
       </options>
   <option value="Estate Roads">
@@ -51,3 +54,5 @@
     <option value="Other">
       </options>
   </datalist>
+</body>
+</html>
