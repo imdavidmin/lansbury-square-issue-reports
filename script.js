@@ -1,4 +1,8 @@
 async function submitReport() {
+  const button = document.querySelector('button');
+  button.innerText = "Submitting"
+  button.disabled = true;
+
   function getVal(id) {
     return document.querySelector(`#${id}`).value;
   }
@@ -13,8 +17,6 @@ async function submitReport() {
     headers: { 'content-type': 'application/json' },
     body: JSON.stringify(payload),
   });
-  const button = document.querySelector('button');
-  button.disabled = true;
 
   if (r.status == 200) {
     button.innerText = 'Submission Successful';
