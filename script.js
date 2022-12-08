@@ -11,6 +11,7 @@ async function submitReport() {
     location: getVal('location'),
     unit: getVal('unit'),
     comment: getVal('comment'),
+    responseRequired: document.querySelector('#respond').checked,
   };
   const r = await fetch('https://api.lansburysquare.com/report/', {
     method: 'POST',

@@ -1,8 +1,9 @@
 <html>
+
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" type="text/css" href="styles.css">
-<script src="script.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  <script src="script.js"></script>
 </head>
 
 <body>
@@ -19,27 +20,36 @@
         <option value="Other">Other</options>
       </select>
       <label required>Location</label>
-      <select id="location"  list="locations">
+      <select id="location" list="locations">
         <option value="Podium Garden">Podium Garden</options>
         <option value="Estate Roads">Estate Roads</options>
+        <option value="24 Rifle Street">24 Rifle Street</options>
         <option value="Banbury Point">Banbury Point</options>
-        <option value="Lamington Heights">Lamington Heights</options>
         <option value="Chorley Court">Chorley Court</options>
-        <option value="Chorley Court">Other</options>
+        <option value="Colston House">Colston House</options>
+        <option value="Lamington Heights">Lamington Heights</options>
+        <option value="Parkin House">Parkin House</options>
+        <option value="Other">Other</options>
       </select>
       <label>Unit number</label>
       <input id="unit" type="text" />
       <label>Additional comments</label>
       <textarea id="comment"></textarea>
+
+    </div>
+    <div class="additionalOptions">
+      <input type="checkbox" name="respond" id="respond">
+      <label for="respond">I require a response</label>
     </div>
     <div class="submit">
       <div class="disclaimer">
-      The site staff team by default will not reply to your logged issue.<br><br>If you would like to be contacted, please leave your details in additional comments.
+        If you would like to be contacted, please leave your details in additional comments.
+      </div>
+      <div>
+        <button onclick="submitReport()">Submit</button>
+      </div>
+
     </div>
-    <div>
-      <button onclick="submitReport()">Submit</button>
-    </div>
-  
-  </div>
 </body>
+
 </html>
